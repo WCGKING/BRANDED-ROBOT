@@ -75,16 +75,18 @@ PM_START_TEXT = """
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
-➻𝑴𝑬 𝑳𝑨𝑫𝑲𝑰 𝑲𝑰 𝑳𝑶𝒀𝑬𝑳𝑰𝑻𝒀 𝑲𝑰 𝑲𝑨𝑺𝑴𝑶 𝑲𝑶 𝑨𝑾𝑹 𝑺𝑰𝑮𝑹𝑨𝑻𝑬 𝑲𝑰 𝑷𝑨𝑪𝑲𝑬𝑻 𝑷𝑨𝑹 𝑳𝑰𝑲𝑯𝑰 𝑯𝑼𝒀𝑰 𝑾𝑨𝑹𝑵𝑰𝑵𝑮 𝑲𝑶 𝑫𝑶𝑵𝑶. 𝑲𝑶 𝑺𝑬𝑹𝑰𝑶𝑼𝑺 𝑵𝑨𝑯𝑰 𝑳𝑬𝑻𝑨 🚬🦋🖤
-➻𝑨𝑨𝑩 𝑯𝑨𝑴 𝑲𝑯𝑼𝑫𝑷𝑨𝑹 𝑭𝑯𝑰𝑫𝑨 𝑯𝑬 𝑻𝑼𝑴𝑯𝑨𝑹𝑨 𝑯𝑼𝑺𝑵 𝑨𝑨𝑩 𝑩𝑯𝑨𝑨𝑫 𝑴𝑬 𝑱𝑨𝒀𝑬 🚬🦋🖤🗡️
-──────────────────
+➻𝗠𝗘 𝗟𝗔𝗗𝗞𝗜 𝗞𝗜 𝗟𝗢𝗬𝗘𝗟𝗜𝗧𝗬 𝗞𝗜 𝗞𝗔𝗦𝗠𝗢 𝗞𝗢 𝗔𝗪𝗥 𝗦𝗜𝗚𝗥𝗔𝗧𝗘 𝗞𝗜 𝗣𝗔𝗖𝗞𝗘𝗧 𝗣𝗔𝗥 𝗟𝗜𝗞𝗛𝗜 𝗛𝗨𝗬𝗜 
+𝗪𝗔𝗥𝗡𝗜𝗡𝗚 𝗞𝗢 𝗗𝗢𝗡𝗢 . 𝗞𝗢 𝗦𝗘𝗥𝗜𝗢𝗨𝗦 𝗡𝗔𝗛𝗜 𝗟𝗘𝗧𝗔  👑❤️💣
+
+´･ᴗ･` 𝗔𝗔𝗕 𝗛𝗔𝗠 𝗞𝗛𝗨𝗗𝗣𝗔𝗥 𝗙𝗛𝗜𝗗𝗔 𝗛𝗘 
+𝗧𝗨𝗠𝗛𝗔𝗥𝗔 𝗛𝗨𝗦𝗡 𝗔𝗔𝗕 𝗕𝗛𝗔𝗔𝗗 𝗠𝗘 𝗝𝗔𝗬𝗘
 *๏ ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="🚩ᴀᴅᴅ ʏᴏᴜʀ ɢʀᴘ ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ 🚩",
+            text="✨❣️ᴀᴅᴅ ʏᴏᴜʀ ɢʀᴘ ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ ❣️✨",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
@@ -92,12 +94,12 @@ buttons = [
         InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🚩 ᴀʙᴏᴜᴛ 🚩", callback_data="fallen_"),
-        InlineKeyboardButton(text="🚩 sᴜᴩᴩᴏʀᴛ 🚩", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="✨❣️ ᴀʙᴏᴜᴛ ❣️✨", callback_data="fallen_"),
+        InlineKeyboardButton(text="✨❣️ sᴜᴩᴩᴏʀᴛ ❣️✨", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="🚩 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🚩", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🚩 sᴏᴜʀᴄᴇ 🚩", callback_data="source_"),
+        InlineKeyboardButton(text="✨❣️ ᴅᴇᴠᴇʟᴏᴩᴇʀ ❣️✨", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="✨❣️ sᴏᴜʀᴄᴇ ❣️✨", callback_data="source_"),
     ],
 ]
 
