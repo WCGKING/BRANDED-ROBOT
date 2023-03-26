@@ -49,17 +49,17 @@ def ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("ᴄʜᴀʟᴀ ᴊᴀ ʙᴍsᴅᴋ ɢʀᴘ ᴋᴏ ɴᴀʜɪ ʜᴇ ᴛᴇʀɪ ᴊᴀʀᴜʀᴀᴛ ✨.")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "User not found":
+        if excp.message != "ᴄʜᴀʟᴀ ᴊᴀ ʙᴍsᴅᴋ ɢʀᴘ ᴋᴏ ɴᴀʜɪ ʜᴇ ᴛᴇʀɪ ᴊᴀʀᴜʀᴀᴛ ✨":
             raise
         message.reply_text("Can't seem to find this person.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("Oh yeah, ban myself, noob!")
+        message.reply_text("ᴄʜᴀʟᴀ ᴊᴀ ʙᴍsᴅᴋ ɢʀᴘ ᴋᴏ ɴᴀʜɪ ʜᴇ ᴛᴇʀɪ ᴊᴀʀᴜʀᴀᴛ ✨!")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
