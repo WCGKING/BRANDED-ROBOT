@@ -5,27 +5,27 @@
 </h2>
 
 <p align="center">
-  <img src="https://github.com/AnonymousX1025/FallenRobot/blob/master/FallenRobot/resources/fglitch.gif">
+  <img src="https://github.com//Rajpomane/blob/master/FallenRobot/resources/fglitch.gif">
 </p>
 
 _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ](https://t.me/FallenXRobot)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-<a href="https://github.com/AnonymousX1025/FallenRobot/stargazers"><img src="https://img.shields.io/github/stars/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/AnonymousX1025/FallenRobot/network/members"> <img src="https://img.shields.io/github/forks/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousX1025/FallenRobot/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/Rajpomane/FallenRobot/stargazers"><img src="https://img.shields.io/github/stars/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/Rajpomane/FallenRobot/network/members"> <img src="https://img.shields.io/github/forks/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Rajpomane/FallenRobot/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-skyblue?style=for-the-badge&logo=python" alt="Python" /> </a>
 <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=blue&style=for-the-badge" /></a>
 <a href="https://pypi.org/project/Pyrogram/"> <img src="https://img.shields.io/pypi/v/pyrogram?color=white&label=pyrogram&logo=python&logoColor=blue&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousX1025/FallenRobot"> <img src="https://img.shields.io/github/repo-size/AnonymousX1025/FallenRobot?color=skyblue&logo=github&logoColor=blue&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousX1025/FallenRobot/commits/AnonymousX1025"> <img src="https://img.shields.io/github/last-commit/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Rajpomane/FallenRobot"> <img src="https://img.shields.io/github/repo-size/Rajpomane/FallenRobot?color=skyblue&logo=github&logoColor=blue&style=for-the-badge" /></a>
+<a href="https://github.com/Rajpomane/FallenRobot/commits/Rajpomane"> <img src="https://img.shields.io/github/last-commit/AnonymousX1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/7bd111132fce009e4605e.jpg">
+  <img src="https://te.legra.ph/file/c97c1a3bea4f3a5762bca.jpg">
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/AnonymousX1025/FallenRobot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Rajpomane/FallenRobot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h3 align="center">
@@ -76,7 +76,7 @@ Press `Ctrl+C` when you're done with editing config and `:wq` to save the config
 Press `Ctrl+b` and then `d`
 
 <p align="center">
-  <img src="https://te.legra.ph/file/4e2bc734e411e2060cb12.png">
+  <img src="https://te.legra.ph/file/c97c1a3bea4f3a5762bca.jpg">
 </p>
 
 </details>
