@@ -75,13 +75,8 @@ PM_START_TEXT = """
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
-➻𝐷𝑢𝑎 𝑘𝑎𝑟𝑜 𝑎𝑎𝑗 𝑒𝑘 𝑘𝑎𝑚𝑎𝑙 
-ℎ𝑜 𝑗𝑎𝑎𝑦𝑒...!
-𝑇𝑢𝑚 𝑘ℎ𝑢𝑠ℎ ℎ𝑜 𝑗𝑎𝑜 𝑎𝑢𝑟 𝑚𝑒𝑟𝑎
-𝑖𝑛𝑡𝑘𝑎𝑎𝑙 ℎ𝑜 𝑗𝑎𝑎𝑦𝑒...!!🥲🥀
-
-𝑠𝑎𝑑 𝑓𝑒𝑙𝑙𝑖𝑛𝑔...
-
+➻𝑴𝑬 𝑳𝑨𝑫𝑲𝑰 𝑲𝑰 𝑳𝑶𝒀𝑬𝑳𝑰𝑻𝒀 𝑲𝑰 𝑲𝑨𝑺𝑴𝑶 𝑲𝑶 𝑨𝑾𝑹 𝑺𝑰𝑮𝑹𝑨𝑻𝑬 𝑲𝑰 𝑷𝑨𝑪𝑲𝑬𝑻 𝑷𝑨𝑹 𝑳𝑰𝑲𝑯𝑰 𝑯𝑼𝒀𝑰 𝑾𝑨𝑹𝑵𝑰𝑵𝑮 𝑲𝑶 𝑫𝑶𝑵𝑶. 𝑲𝑶 𝑺𝑬𝑹𝑰𝑶𝑼𝑺 𝑵𝑨𝑯𝑰 𝑳𝑬𝑻𝑨 🚬🦋🖤
+➻𝑨𝑨𝑩 𝑯𝑨𝑴 𝑲𝑯𝑼𝑫𝑷𝑨𝑹 𝑭𝑯𝑰𝑫𝑨 𝑯𝑬 𝑻𝑼𝑴𝑯𝑨𝑹𝑨 𝑯𝑼𝑺𝑵 𝑨𝑨𝑩 𝑩𝑯𝑨𝑨𝑫 𝑴𝑬 𝑱𝑨𝒀𝑬 🚬🦋🖤🗡️
 ──────────────────
 *๏ ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤*
 """
@@ -89,7 +84,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="AAD KAR AAPNE GROUP ME",
+            text="🚩ᴀᴅᴅ ʏᴏᴜʀ ɢʀᴘ ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ 🚩",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
@@ -98,11 +93,11 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="🚩 ᴀʙᴏᴜᴛ 🚩", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="🚩 sᴜᴩᴩᴏʀᴛ 🚩", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(text="🚩 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🚩", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🕉️ sᴏᴜʀᴄᴇ 🕉️", callback_data="source_"),
+        InlineKeyboardButton(text="🚩 sᴏᴜʀᴄᴇ 🚩", callback_data="source_"),
     ],
 ]
 
