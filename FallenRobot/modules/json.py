@@ -52,4 +52,3 @@ async def _(event):
             await event.delete()
     else:
         await event.reply("`{}`".format(the_real_message))
-
