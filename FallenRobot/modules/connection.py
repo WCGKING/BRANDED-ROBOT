@@ -3,7 +3,7 @@ import time
 
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
-from telegram.ext import CallbackQueryHandler, CommandHandler, run_async
+from telegram.ext import CallbackQueryHandler, CommandHandler
 
 import FallenRobot.modules.sql.connection_sql as sql
 from FallenRobot import DEV_USERS, DRAGONS, dispatcher
@@ -14,10 +14,8 @@ user_admin = chat_status.user_admin
 
 
 @user_admin
-@run_async
 @typing_action
 def allow_connections(update, context) -> str:
-
     chat = update.effective_chat
     args = context.args
 
@@ -62,10 +60,8 @@ def allow_connections(update, context) -> str:
         )
 
 
-@run_async
 @typing_action
 def connection_chat(update, context):
-
     chat = update.effective_chat
     user = update.effective_user
 
@@ -87,10 +83,8 @@ def connection_chat(update, context):
     send_message(update.effective_message, message, parse_mode="markdown")
 
 
-@run_async
 @typing_action
 def connect_chat(update, context):
-
     chat = update.effective_chat
     user = update.effective_user
     args = context.args
@@ -249,7 +243,6 @@ def connect_chat(update, context):
 
 
 def disconnect_chat(update, context):
-
     if update.effective_chat.type == "private":
         disconnection_status = sql.disconnect(update.effective_message.from_user.id)
         if disconnection_status:
@@ -266,7 +259,6 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
     user = update.effective_user
 
     if chat.type == chat.PRIVATE and sql.get_connected_chat(user_id):
-
         conn_id = sql.get_connected_chat(user_id).chat_id
         getstatusadmin = bot.get_chat_member(
             conn_id, update.effective_message.from_user.id
@@ -306,7 +298,8 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
 
 
 CONN_HELP = """
- Actions are available with connected groups:
+ *Actions are available with connected groups :*
+
  • View and edit Notes.
  • View and edit Filters.
  • Get invite link of chat.
@@ -317,9 +310,7 @@ CONN_HELP = """
  • Export and Imports of chat backup."""
 
 
-@run_async
 def help_connect_chat(update, context):
-
     context.args
 
     if update.effective_message.chat.type != "private":
@@ -329,9 +320,7 @@ def help_connect_chat(update, context):
         send_message(update.effective_message, CONN_HELP, parse_mode="markdown")
 
 
-@run_async
 def connect_button(update, context):
-
     query = update.callback_query
     chat = update.effective_chat
     user = update.effective_user
@@ -401,14 +390,20 @@ This allows you to connect to a chat's database, and add things to it without th
  ❍ /allowconnect <yes/no>: allow a user to connect to a chat
 """
 
-CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, pass_args=True)
-CONNECTION_CHAT_HANDLER = CommandHandler("connection", connection_chat)
-DISCONNECT_CHAT_HANDLER = CommandHandler("disconnect", disconnect_chat)
-ALLOW_CONNECTIONS_HANDLER = CommandHandler(
-    "allowconnect", allow_connections, pass_args=True
+CONNECT_CHAT_HANDLER = CommandHandler(
+    "connect", connect_chat, pass_args=True, run_async=True
 )
-HELP_CONNECT_CHAT_HANDLER = CommandHandler("helpconnect", help_connect_chat)
-CONNECT_BTN_HANDLER = CallbackQueryHandler(connect_button, pattern=r"connect")
+CONNECTION_CHAT_HANDLER = CommandHandler("connection", connection_chat, run_async=True)
+DISCONNECT_CHAT_HANDLER = CommandHandler("disconnect", disconnect_chat, run_async=True)
+ALLOW_CONNECTIONS_HANDLER = CommandHandler(
+    "allowconnect", allow_connections, pass_args=True, run_async=True
+)
+HELP_CONNECT_CHAT_HANDLER = CommandHandler(
+    "helpconnect", help_connect_chat, run_async=True
+)
+CONNECT_BTN_HANDLER = CallbackQueryHandler(
+    connect_button, pattern=r"connect", run_async=True
+)
 
 dispatcher.add_handler(CONNECT_CHAT_HANDLER)
 dispatcher.add_handler(CONNECTION_CHAT_HANDLER)
