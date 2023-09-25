@@ -83,3 +83,4 @@ __mod_name__ = "Tɪɴʏ"
 __help__ = """
 ❍ /tiny*:* reply a sticker and see magic
 """
+
