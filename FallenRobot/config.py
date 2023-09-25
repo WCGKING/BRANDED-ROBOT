@@ -49,4 +49,3 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
-
