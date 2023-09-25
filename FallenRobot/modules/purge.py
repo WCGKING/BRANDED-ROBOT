@@ -85,4 +85,3 @@ telethn.add_event_handler(*DEL_HANDLER)
 __mod_name__ = "Pᴜʀɢᴇ"
 __command_list__ = ["del", "purge"]
 __handlers__ = [PURGE_HANDLER, DEL_HANDLER]
-
