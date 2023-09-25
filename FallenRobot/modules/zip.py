@@ -12,7 +12,6 @@ from FallenRobot.events import register
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-
         return isinstance(
             (
                 await client(functions.channels.GetParticipantRequest(chat, user))
@@ -20,7 +19,6 @@ async def is_register_admin(chat, user):
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
     if isinstance(chat, types.InputPeerChat):
-
         ui = await client.get_peer_id(user)
         ps = (
             await client(functions.messages.GetFullChatRequest(chat.chat_id))
@@ -94,7 +92,6 @@ if not os.path.isdir(extracted):
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-
         return isinstance(
             (
                 await client(functions.channels.GetParticipantRequest(chat, user))
@@ -102,7 +99,6 @@ async def is_register_admin(chat, user):
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
     if isinstance(chat, types.InputPeerChat):
-
         ui = await client.get_peer_id(user)
         ps = (
             await client(functions.messages.GetFullChatRequest(chat.chat_id))
@@ -210,9 +206,10 @@ def get_lst_of_files(input_directory, output_lst):
 
 
 __help__ = """
-Hey I can convert files here..
+Hey I can convert files here.
+
  ❍ /zip*:* reply to a telegram file to compress it in .zip format
  ❍ /unzip*:* reply to a telegram file to decompress it from the .zip format
 """
 
-__mod_name__ = "Zɪᴘᴘᴇʀ​"
+__mod_name__ = "Zɪᴘᴘᴇʀ"
