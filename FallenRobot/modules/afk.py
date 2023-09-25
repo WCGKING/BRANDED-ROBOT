@@ -24,7 +24,7 @@ def afk(update: Update, context: CallbackContext):
     if not user:  # ignore channels
         return
 
-    if user.id in [111000, -1001908859081:
+    if user.id in [777000, 6258877205]:
         return
 
     notice = ""
