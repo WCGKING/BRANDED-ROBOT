@@ -22,7 +22,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
 
@@ -75,18 +75,16 @@ PM_START_TEXT = """
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
-➻𝗠𝗘 𝗟𝗔𝗗𝗞𝗜 𝗞𝗜 𝗟𝗢𝗬𝗘𝗟𝗜𝗧𝗬 𝗞𝗜 𝗞𝗔𝗦𝗠𝗢 𝗞𝗢 𝗔𝗪𝗥 𝗦𝗜𝗚𝗥𝗔𝗧𝗘 𝗞𝗜 𝗣𝗔𝗖𝗞𝗘𝗧 𝗣𝗔𝗥 𝗟𝗜𝗞𝗛𝗜 𝗛𝗨𝗬𝗜 
-𝗪𝗔𝗥𝗡𝗜𝗡𝗚 𝗞𝗢 𝗗𝗢𝗡𝗢 . 𝗞𝗢 𝗦𝗘𝗥𝗜𝗢𝗨𝗦 𝗡𝗔𝗛𝗜 𝗟𝗘𝗧𝗔  👑❤️💣
+➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 
-´･ᴗ･` 𝗔𝗔𝗕 𝗛𝗔𝗠 𝗞𝗛𝗨𝗗𝗣𝗔𝗥 𝗙𝗛𝗜𝗗𝗔 𝗛𝗘 
-𝗧𝗨𝗠𝗛𝗔𝗥𝗔 𝗛𝗨𝗦𝗡 𝗔𝗔𝗕 𝗕𝗛𝗔𝗔𝗗 𝗠𝗘 𝗝𝗔𝗬𝗘
-*๏ ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤*
+──────────────────
+*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="✨❣️ᴀᴅᴅ ʏᴏᴜʀ ɢʀᴘ ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ ❣️✨",
+            text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
@@ -94,12 +92,12 @@ buttons = [
         InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="✨❣️ ᴀʙᴏᴜᴛ ❣️✨", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨❣️ sᴜᴩᴩᴏʀᴛ ❣️✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
+        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="✨❣️ ᴅᴇᴠᴇʟᴏᴩᴇʀ ❣️✨", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="✨❣️ sᴏᴜʀᴄᴇ ❣️✨", callback_data="source_"),
+        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="☁️ sᴏᴜʀᴄᴇ ☁️", callback_data="source_"),
     ],
 ]
 
@@ -170,7 +168,6 @@ def send_help(chat_id, text, keyboard=None):
     )
 
 
-@run_async
 def start(update: Update, context: CallbackContext):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
@@ -190,6 +187,8 @@ def start(update: Update, context: CallbackContext):
                     ),
                 )
 
+            elif args[0].lower() == "markdownhelp":
+                IMPORTED["exᴛʀᴀs"].markdown_help_sender(update)
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
                 chat = dispatcher.bot.getChat(match.group(1))
@@ -205,7 +204,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAECa3pkHFxucauJfyO0rc0WLQ4qGf_7KAAC9AwAAoRMoFTwHSfo2rt0fC8E"
+                "AgACAgUAAxkBAAEPb91lERz2k_sERIU1iaK5d5k87EFzNAACp7gxG7qGiFQJOPAK6EkHVQEAAwIAA3gAAzAE"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -281,7 +280,6 @@ def error_callback(update: Update, context: CallbackContext):
         # handle all other telegram related errors
 
 
-@run_async
 def help_button(update, context):
     query = update.callback_query
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
@@ -344,7 +342,6 @@ def help_button(update, context):
         pass
 
 
-@run_async
 def Fallen_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "fallen_":
@@ -412,7 +409,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ɢɪᴛʜᴜʙ",
-                            url="https://github.com/AnonymousX1025",
+                            url="https://github.com/WCGKING",
                         ),
                     ],
                     [
@@ -432,7 +429,6 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
 
 
-@run_async
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
@@ -448,11 +444,11 @@ def Source_about_callback(update: Update, context: CallbackContext):
 ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
 
 
-*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://github.com/AnonymousX1025/FallenRobot)
+*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://github.com/WCGKING/BRANDED-ROBOT)
 
 
-{BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://github.com/AnonymousX1025/FallenRobot/blob/master/LICENSE).
-© 2022 - 2023 [@ᴅᴇᴠɪʟsʜᴇᴀᴠᴇɴᴍғ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
+{BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://github.com/WCGKING/BRANDED-ROBOTblob/master/LICENSE).
+© 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -471,7 +467,6 @@ def Source_about_callback(update: Update, context: CallbackContext):
         )
 
 
-@run_async
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     args = update.effective_message.text.split(None, 1)
@@ -580,7 +575,6 @@ def send_settings(chat_id, user_id, user=False):
             )
 
 
-@run_async
 def settings_button(update: Update, context: CallbackContext):
     query = update.callback_query
     user = update.effective_user
@@ -664,7 +658,6 @@ def settings_button(update: Update, context: CallbackContext):
             LOGGER.exception("Exception in settings buttons. %s", str(query.data))
 
 
-@run_async
 def get_settings(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -716,7 +709,6 @@ def migrate_chats(update: Update, context: CallbackContext):
 
 
 def main():
-
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.send_photo(
@@ -740,19 +732,23 @@ def main():
         except BadRequest as e:
             LOGGER.warning(e.message)
 
-    start_handler = CommandHandler("start", start)
+    start_handler = CommandHandler("start", start, run_async=True)
 
-    help_handler = CommandHandler("help", get_help)
-    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_.*")
+    help_handler = CommandHandler("help", get_help, run_async=True)
+    help_callback_handler = CallbackQueryHandler(
+        help_button, pattern=r"help_.*", run_async=True
+    )
 
-    settings_handler = CommandHandler("settings", get_settings)
-    settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
+    settings_handler = CommandHandler("settings", get_settings, run_async=True)
+    settings_callback_handler = CallbackQueryHandler(
+        settings_button, pattern=r"stngs_", run_async=True
+    )
 
     about_callback_handler = CallbackQueryHandler(
-        Fallen_about_callback, pattern=r"fallen_"
+        Fallen_about_callback, pattern=r"fallen_", run_async=True
     )
     source_callback_handler = CallbackQueryHandler(
-        Source_about_callback, pattern=r"source_"
+        Source_about_callback, pattern=r"source_", run_async=True
     )
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
@@ -769,7 +765,7 @@ def main():
     dispatcher.add_error_handler(error_callback)
 
     LOGGER.info("Using long polling.")
-    updater.start_polling(timeout=15, read_latency=4, clean=True)
+    updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
     if len(argv) not in (1, 3, 4):
         telethn.disconnect()
