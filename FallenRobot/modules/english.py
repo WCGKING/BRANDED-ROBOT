@@ -2,8 +2,6 @@ import json
 
 import requests
 from PyDictionary import PyDictionary
-from telethon import *
-from telethon.tl.types import *
 
 from FallenRobot.events import register
 
@@ -65,7 +63,7 @@ async def _(event):
 
 @register(pattern="^/antonyms")
 async def _(event):
-    text = message.text[len("/antonyms ") :]
+    text = event.text[len("/antonyms ") :]
     word = f"{text}"
     let = dictionary.antonym(word)
     set = str(let)
