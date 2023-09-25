@@ -1,5 +1,5 @@
 {
-      "name": "khushi x Fidaa",
+      "name": "BRANDED ROBOT",
       "description": "Telegram Group Management Bot.",
       "logo": "https://te.legra.ph/file/6a4ac076ff159bdcf9656.jpg",
       "keywords": [
@@ -9,7 +9,7 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/AnonymousX1025/FallenRobot",
+   "repository": "https://github.com/WCGKING/BRANDED-ROBOT",
    "stack": "heroku-22",
    "addons": [
       {
