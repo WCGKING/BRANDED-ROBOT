@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from FallenRobot import pbot as Client
+from FallenRobot import pbot
 from FallenRobot.utils.fonts import Fonts
 
 
-@Client.on_message(filters.command(["font", "fonts"]))
+@pbot.on_message(filters.command(["font", "fonts"]))
 async def style_buttons(c, m, cb=False):
     buttons = [
         [
@@ -47,14 +47,16 @@ async def style_buttons(c, m, cb=False):
     ]
     if not cb:
         await m.reply_text(
-            m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True
+            text=m.text.split(None, 1)[1],
+            reply_markup=InlineKeyboardMarkup(buttons),
+            quote=True,
         )
     else:
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 
-@Client.on_callback_query(filters.regex("^nxt"))
+@pbot.on_callback_query(filters.regex("^nxt"))
 async def nxt(c, m):
     if m.data == "nxt":
         buttons = [
@@ -104,7 +106,7 @@ async def nxt(c, m):
         await style_buttons(c, m, cb=True)
 
 
-@Client.on_callback_query(filters.regex("^style"))
+@pbot.on_callback_query(filters.regex("^style"))
 async def style(c, m):
     await m.answer()
     cmd, style = m.data.split("+")
@@ -187,7 +189,7 @@ async def style(c, m):
         cls = Fonts.strike
     if style == "frozen":
         cls = Fonts.frozen
-    new_text = cls(m.message.reply_to_message.text)
+    new_text = cls(m.message.reply_to_message.text.split(None, 1)[1])
     try:
         await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
     except:
@@ -195,8 +197,7 @@ async def style(c, m):
 
 
 __help__ = """
-
- ❍ font <text> *:* ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
+ ❍ /font <text> *:* ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
  """
 
 __mod_name__ = "Fᴏɴᴛ Eᴅɪᴛᴏʀ"
