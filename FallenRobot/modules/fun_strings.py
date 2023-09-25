@@ -440,4 +440,3 @@ TABLE = (
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables.",
 )
-
