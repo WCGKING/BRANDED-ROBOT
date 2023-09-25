@@ -4,7 +4,6 @@ import sys
 import time
 
 import telegram.ext as tg
-from aiohttp import ClientSession
 from pyrogram import Client, errors
 from telethon import TelegramClient
 
@@ -12,7 +11,7 @@ StartTime = time.time()
 
 # enable logging
 logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
@@ -32,7 +31,6 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
 ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
-
     API_ID = int(os.environ.get("API_ID", None))
     API_HASH = os.environ.get("API_HASH", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
@@ -46,7 +44,7 @@ if ENV:
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get(
-        "START_IMG", "https://te.legra.ph/file/7a15164b816f55b5b9923.jpg"
+        "START_IMG", "https://te.legra.ph/file/e3c1ae96d329acd2d99cf.jpg"
     )
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "BRANDED_WORLD")
@@ -143,7 +141,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1356469075)
+DEV_USERS.add(6258877205)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
@@ -151,7 +149,6 @@ telethn = TelegramClient("Fallen", API_ID, API_HASH)
 
 pbot = Client("FallenRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
-aiohttpsession = ClientSession()
 
 print("[INFO]: Getting Bot Info...")
 BOT_ID = dispatcher.bot.id
