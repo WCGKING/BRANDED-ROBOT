@@ -115,4 +115,3 @@ I will give information about a country
 """
 
 __mod_name__ = "Cᴏᴜɴᴛʀʏ"
-
