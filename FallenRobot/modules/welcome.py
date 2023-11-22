@@ -1,9 +1,9 @@
-import os
-from PIL import ImageDraw, Image, ImageFont, ImageChops
-from pyrogram import *
-from pyrogram.types import *
-from logging import getLogger
-from FallenRobot import app
+import html
+import random
+import re
+import time
+from contextlib import suppress
+from functools import partial
 
 LOGGER = getLogger(__name__)
 
