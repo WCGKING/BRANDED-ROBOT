@@ -14,7 +14,7 @@
    "addons": [
       {
          "options": {
-            "version": "12"
+            "version": "13"
          },
          "plan": "heroku-postgresql"
       }
@@ -61,17 +61,17 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "6258877205"
+         "value": "1356469075"
       },
       "START_IMG": {
          "description": "Telegraph link of the image which will be shown at start command.",
          "required": true,
-         "value": "https://te.legra.ph/file/82f1053c956dd6256ff1e.jpg"
+         "value": ""
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Fallen Support than consider you made an enemy.",
          "required": true,
-         "value": "BRANDED_WORLD"
+         "value": "DevilsHeavenMF"
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
