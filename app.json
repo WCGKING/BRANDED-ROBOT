@@ -61,7 +61,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1356469075"
+         "value": "6258877205"
       },
       "START_IMG": {
          "description": "Telegraph link of the image which will be shown at start command.",
