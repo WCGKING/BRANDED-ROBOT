@@ -8,9 +8,9 @@ bleach==6.1.0
 bs4==0.0.2
 cachetools==4.2.2
 countryinfo==0.1.2
-currencyconverter==0.17.21
+currencyconverter==0.17.23
 dateparser==1.2.0
-emoji==2.11.1
+emoji==2.12.1
 emoji-country-flag==1.3.2
 feedparser==6.0.11
 future==1.0.0
@@ -22,7 +22,7 @@ jikanpy==4.3.2
 lxml==4.9.4
 markdown2==2.4.13
 motor==3.4.0
-opencv-python-headless==4.9.0.80
+opencv-python-headless==4.10.0.82
 pillow==10.2.0
 pretty_errors==1.2.25
 psutil==5.9.8
@@ -33,8 +33,8 @@ pynewtonmath==1.0.1
 pyrate-limiter==3.1.0
 pyrogram==2.0.106
 python-telegram-bot==13.15
-regex==2024.5.10
-requests==2.31.0
+regex==2024.5.15
+requests==2.32.3
 secureme==0.0.4
 search_engine_parser==0.6.8
 speedtest-cli==2.1.3
