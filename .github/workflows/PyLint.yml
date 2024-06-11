@@ -30,6 +30,6 @@ jobs:
           commit_message: 'Auto Fixes' 
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: AnonymousX1025
-          commit_user_email: TheAnonymousX1025@gmail.com
-          commit_author: AnonymousX1025 <TheAnonymousX1025@gmail.com>
+          commit_user_name: WCGKING
+          commit_user_email: WCGKING@gmail.com
+          commit_author: WCGKING <WCGKING@gmail.com>
