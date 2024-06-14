@@ -2,7 +2,6 @@ import html
 import json
 import re
 from time import sleep
-
 import requests
 from telegram import (
     CallbackQuery,
@@ -26,7 +25,7 @@ import FallenRobot.modules.sql.chatbot_sql as sql
 from FallenRobot import BOT_ID, BOT_NAME, BOT_USERNAME, dispatcher
 from FallenRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
 from FallenRobot.modules.log_channel import gloggable
-
+from MukeshAPI import api
 
 @user_admin_no_reply
 @gloggable
@@ -37,13 +36,13 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
     if match:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
-        is_fallen = sql.set_fallen(chat.id)
+        is_fallen = sql.rem_fallen(chat.id)
         if is_fallen:
-            is_fallen = sql.set_fallen(user_id)
+            is_fallen = sql.rem_fallen(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"AI_DISABLED\n"
-                f"<b>Admin :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+                f"ᴀɪ ᴅɪꜱᴀʙʟᴇᴅ\n"
+                f"<b>ᴀᴅᴍɪɴ :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
             update.effective_message.edit_text(
@@ -70,8 +69,8 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
             is_fallen = sql.rem_fallen(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"AI_ENABLE\n"
-                f"<b>Admin :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+                f"ᴀɪ ᴇɴᴀʙʟᴇ\n"
+                f"<b>ᴀᴅᴍɪɴ :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
             update.effective_message.edit_text(
@@ -106,9 +105,9 @@ def fallen(update: Update, context: CallbackContext):
 
 def fallen_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "fallen":
+    if message.text.lower() == "mukesh":
         return True
-    elif BOT_USERNAME in message.text:
+    elif BOT_USERNAME in message.text.upper():
         return True
     elif reply_message:
         if reply_message.from_user.id == BOT_ID:
@@ -129,21 +128,13 @@ def chatbot(update: Update, context: CallbackContext):
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        request = requests.get(
-            f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/Anonymous/message={message.text}"
-        )
-        results = json.loads(request.text)
-        sleep(0.5)
-        message.reply_text(results["reply"])
+        url=api.chatgpt(message.text,mode="gf")["results"]
+        message.reply_text(url)
 
 
-__help__ = f"""
-*{BOT_NAME} has an chatbot which provides you a seemingless chatting experience :*
 
- »  /chatbot *:* Shows chatbot control panel
-"""
 
-__mod_name__ = "Cʜᴀᴛʙᴏᴛ"
+
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
